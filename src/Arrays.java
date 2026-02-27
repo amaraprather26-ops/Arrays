@@ -14,6 +14,9 @@ public class Arrays {
         }
         displayArray();
         sumArray();
+        average();
+        maxNum();
+        maxIndex();
     }
 
     public void displayArray(){
@@ -23,14 +26,44 @@ public class Arrays {
     }
 
     public void sumArray(){
-        sum = 0;
+        int sum = 0;
         for(int z= 0; z < nums.length; z++){
             sum = sum + nums[z];
         }
         System.out.println(sum);
     }
 
-    public void largestNum(){
+    public void average(){
+        int average = sum/nums.length;
+        System.out.println(average);
+    }
+
+    public void minNum(){
+
+    }
+
+    public void maxNum(){
+         int max = nums[0];
+        for (int i=0;i<nums.length; i++){
+            max = Math.max(max, nums[i]);
+
+            if (nums[i]> max){
+                max = nums[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    public void maxIndex(){
+        int index  = 0;
+        int max = 0;
+        for (int i = 0; i< nums.length; i++ ){
+            if(nums[i]>max){
+                max = nums[i];
+                index = i;
+            }
+        }
+        System.out.println("index:" + index);
 
     }
 }
