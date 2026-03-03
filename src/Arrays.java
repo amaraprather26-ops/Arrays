@@ -17,6 +17,7 @@ public class Arrays {
         average();
         maxNum();
         maxIndex();
+        greaterThan50();
     }
 
     public void displayArray(){
@@ -63,7 +64,17 @@ public class Arrays {
                 index = i;
             }
         }
-        System.out.println("index:" + index);
+        System.out.println("max index: " + index);
 
+    }
+    public void greaterThan50(){
+        int over50 = 0;
+
+        for (int i = 0; i<nums.length; i=i+1) {
+            if (nums[i] > 50) {
+                over50 = over50 + 1;
+            }
+        }
+            System.out.println("number of values over 50: "+ over50);
     }
 }
