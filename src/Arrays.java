@@ -1,6 +1,7 @@
 public class Arrays {
     public int sum;
     public int[] nums;
+    public Star[] stars;
 
     public static void main(String[] args) {
         System.out.println("Arrays");
@@ -9,15 +10,41 @@ public class Arrays {
 
     public Arrays(){
         nums = new int[10];//10 buckets labeled 0-9
+
+        stars = new Star[7];
+        stars[0] = new Star();
+        Star s1 = new Star();
+       stars[0].printInfo();
+       s1.color  = "blue";
+       s1.points = 5;
+       s1.printInfo();
+       stars[0].color = "white";
+
+       for (int i = 0; i<stars.length; i++){
+           stars[i] = new Star();
+        }
+
+       for (int x=0; x<stars.length; x++){
+           stars[x].points = (int)(Math.random()*11);
+       }
+
+
         for(int y = 0; y<nums.length; y++){
             nums[y] = (int)(Math.random()*100)+1;
         }
-        displayArray();
-        sumArray();
-        average();
-        maxNum();
-        maxIndex();
-        greaterThan50();
+        //displayArray();
+        //sumArray();
+        //average();
+        //maxNum();
+        //maxIndex();
+        //greaterThan50();
+        displayStars();
+    }
+
+    public void displayStars(){
+        for(int i=0; i<stars.length; i++){
+            stars[i].printInfo();
+        }
     }
 
     public void displayArray(){
