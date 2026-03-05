@@ -39,6 +39,15 @@ public class Arrays {
         //maxIndex();
         //greaterThan50();
         displayStars();
+        sumPoints();
+    }
+
+    public void sumPoints(){
+        int sum = 0;
+        for(int i=0; i<stars.length; i++){
+            sum = stars[i].points + sum;
+        }
+        System.out.println(sum);
     }
 
     public void displayStars(){
